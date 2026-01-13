@@ -1,26 +1,18 @@
 /* ################# popup date choose ##################### */
-.popup_overlay{
 
- 
+.popup_overlay{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
 }
-/* .popup_content{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: white;  
-} */
+
  .popup_content{
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: white; */
-  width: 80%;
+  /* width: 80%; */
   max-width: 1100px;
   padding: 20px;
 
@@ -30,11 +22,13 @@
   
   display: flex;
  align-items: center;
+ justify-content: center;
   gap: 15px;
   margin: 20px 0;
   background-color: #c5c3c3;
   padding: 15px 20px;
   border-radius: 10px;
+  width: 100% ;
  
 
 }
@@ -51,11 +45,11 @@
   
   
 }
-/* .icon{
+.icon{
   margin-top: 26px;
   margin-left: 10px;
   
-} */
+}
 .input_guest{
   padding: 10px 15px;
   width: 100%;
@@ -85,20 +79,29 @@
   width: 20px;
   height: 20px;
 }
-.btnContent{
-  background-color: red;
-}
 
 /* room details content and image */
+
+.popup_room_details{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  padding: 20px;
+  gap: 10px;
+}
 .details_room{
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 20px;
 }
 .paragraph{
   text-align: justify;
+  line-height: 25px;
+  margin-top: 20px;
   
 }
+
 .popup_room_details_container{
   display: flex;
   flex-direction: column;
@@ -110,7 +113,7 @@
 .img_content_container{
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     gap: 20px;
 }
 
@@ -119,10 +122,13 @@
   /* height: 250px; */
   object-fit: cover;
 }
+.title{
+    margin-bottom: 10px;
+}
 .content_wrapper{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: flex-start;
     margin-left: 20px;
     gap: 10px;
@@ -212,4 +218,55 @@
 .bookbtn_popup:hover{
     box-shadow: 0 6px 18px rgb(25, 0, 255);
   transform: translateY(-2px);
+}
+
+
+
+
+
+/* media query  */
+@media (max-width: 480px) {
+  .img_content_container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .roomimage{
+    width: 100%;
+  }
+  .booking_date_form{
+  flex-direction: column;
+  }
+  .content_wrapper{
+    margin: 0;
+  }
+  .details_room{
+    gap: 15px;
+  }
+  .cancle_icon_text_container{
+    padding: 25px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .bookbtn_popup{
+    padding: 10px 20px;
+    font-size: 20px;
+  }
+  .cancle_icon_text_subcontainer{
+    gap: 8px;
+  }
+  .price, .costprice{
+    font-size: 18px;
+ 
+  }
+  .cost_for_night_wrapper{
+        margin: 10px 0 15px 0;
+        gap: 5px;
+  }
+   .popup_content{
+
+  width: 100%;
+
+
+}
 }

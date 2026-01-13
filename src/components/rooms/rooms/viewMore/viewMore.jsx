@@ -1,18 +1,23 @@
 // import  selectedRoom from '../rooms/roomCards.jsx'
 import { Link, useParams } from "react-router-dom";
 import style from "./viewMore.module.css";
-import { Bath, BedDouble, Calendar, CircleCheck, IndianRupee, Info, PersonStanding } from "lucide-react";
-import roomsData from "../roomdata.json";
+import { Bath, BedDouble, Calendar, ChevronLeft, ChevronRight, CircleCheck, IndianRupee, Info, PersonStanding } from "lucide-react";
+import roomsData from "../../roomdata.json";
+import Nav_Bar from "../../../Nav_Bar";
+import Testimonials from "./testimonials";
+ import Footer from "../../../Footer.jsx";
 const ViewMore = () => {
+
       const { id } = useParams();
 
   const selectedRoom = roomsData.find(
     (room) => room.id === Number(id)
   );
-//    if (!selectedRoom) return <h2>Room Not Found</h2>;
+   if (!selectedRoom) return <h2>Room Not Found</h2>;
     
   return (
-  
+  <div className={style.viewmore_container}>
+    <Nav_Bar />
   <div className={style.popup_overlay}>
     <div className={style.popup_content}>
       {/* <h2>Choose Your Booking Date</h2> */}
@@ -32,7 +37,7 @@ const ViewMore = () => {
           </div>
         
         <button className={style.promoBtn}>
-          <img src="images/rooms/popup/promo.webp" alt="edit" /> 
+          <img src="/images/rooms/popup/promo.webp" alt="edit" /> 
           <div className={style.btnContent}>Add Promo Code</div>
         </button>
       </form>
@@ -42,12 +47,10 @@ const ViewMore = () => {
             
          {selectedRoom.gallery.map((img, index) => (
              <div key={index} className={style.popup_room_details}>
-                <div className={style.img_content_container}>
-                    <div>
-            <img  className={style.roomimage} src={img} alt="" />
-            </div>
-             <div className={style.content_wrapper}>
-                    <h3>{selectedRoom.title}</h3>
+              <div className={style.img_content_container}>
+                <img  className={style.roomimage} src={img} alt="" />
+                <div className={style.content_wrapper}>
+                    <h2 className={style.title}>{selectedRoom.title}</h2>
                     
                     <div className={style.details_room}>
                         <div className={style.All_icon_wrapper}>
@@ -62,11 +65,11 @@ const ViewMore = () => {
                          </div>
                     </div>
                     
+                    
                     <p className={style.paragraph}>{selectedRoom.description}</p>
-                    <p>
-                        <IndianRupee size={14} /> {selectedRoom.price} {selectedRoom.per}
-                    </p>
-           </div>
+                 
+                    
+              </div>
            </div>
              <div className={style.cancle_icon_text_container}>
                 <div className={style.cancle_icon_text_subcontainer}>
@@ -84,10 +87,10 @@ const ViewMore = () => {
                      </div>
                      <p className={style.costprice}>Cost for 1 night, 2 guests</p>
                 </div>
-                <div>
+             
                    <Link to="https://www.booking.com/hotel/np/sudarshan-resort.html" target="_blank" className={style.bookbtn_popup}> Go to Booking </Link>
-                </div>
                 
+              
                 
             </div>
       </div>
@@ -96,9 +99,17 @@ const ViewMore = () => {
         ))}
         
       </div>
+      
+      
+     {/* testimonials */}
      
+       <Testimonials />
+        
       
     </div>
+    
+  </div>
+  <Footer />
   </div>
 
   )

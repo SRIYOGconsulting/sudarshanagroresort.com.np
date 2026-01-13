@@ -108,8 +108,9 @@
   margin-top: 15px;
 }
 .choose_date_button{
-  padding: 10px 15px;
-  border: none;
+  padding: 10px 40px;
+  border: 1px solid green;
+  text-decoration: none;
   cursor: pointer;
   border-radius: 20px;
   color: rgb(8, 105, 4);

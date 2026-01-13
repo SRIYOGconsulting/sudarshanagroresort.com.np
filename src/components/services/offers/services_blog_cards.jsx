@@ -12,7 +12,15 @@ const Offer_blog_cards = () => {
         {img:"images/services/drink.webp", service_name: "Drink",  service_description:  "Quench your thirst with our variety of beverage options available onsite."},
         {img:"images/services/farm-to-table.webp", service_name: "Farm-to-Table Dining",  service_description:  "We provide fresh, organic produce grown on-site or sourced locally. Guests often enjoy meals made from ingredients harvested directly from the resort's farm."},
         {img:"images/services/riverside.webp", service_name: "Riverside",  service_description:  "Enjoy peaceful mornings by the water and unforgettable views from our balcony."},
-        {img:"images/services/fishing1.webp", service_name: "Fishing",  service_description:  "Experience the joy of fishing in our resort, where relaxation meets adventure."}
+        {img:"images/services/fishing1.webp", service_name: "Fishing",  service_description:  "Experience the joy of fishing in our resort, where relaxation meets adventure."},
+        {img:"images/services/parking.webp", service_name: "Parking",  service_description:  "Convenient on-site parking available for all guests."},
+          {img:"images/services/snacks.webp", service_name: "Snacks",  service_description:  "Enjoy a variety of delicious snacks available throughout the resort."},
+           {img:"images/services/spa.webp", service_name: "Spa",  service_description:  "Relax and rejuvenate with our luxurious spa services."},
+           {img:"images/services/airportshuttle.webp", service_name: "Airport shuttle",  service_description:  "Convenient airport shuttle service to and from the resort."},
+           {img:"images/services/family.webp", service_name: "Family rooms",  service_description:  "we offer spacious family rooms designed for comfort and convenience."},
+           {img:"images/services/desktop.webp", service_name: "Media and Technology",  service_description:  "Flat-screen TVs, high-speed internet access, and charging stations.,radio,telephone"},
+           {img:"images/services/breakfast.webp", service_name: "Breakfast in the room",  service_description:  "breakfast served in the room at your convenience."},
+            {img:"images/services/puzzle.webp", service_name: "Board games/puzzles",  service_description:  "Enjoy a variety of board games and puzzles for all ages."},
     ]
     
   return (

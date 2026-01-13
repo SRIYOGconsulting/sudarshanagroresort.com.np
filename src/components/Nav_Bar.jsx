@@ -44,7 +44,7 @@ const Nav_Bar = () => {
       {/* Navbar */}
       <nav className={`${style.navContainer} ${scroll ? style.navScroll : ""}`}>
         <div className={style.navLogo}>
-          <img src="favicon/logo.webp" alt="logo" />
+          <img src="/favicon/logo.webp" alt="logo" />
         </div>
         
        

@@ -22,7 +22,7 @@ const Services = () => {
       <NavBar />
       <Herosection h1="Services" tab="Home" p="services" bg="images/background/1.webp"/>
       <Offer />
-      <EnjoyAgro bg="images/services/transparentbg/bg.webp" />
+      <EnjoyAgro bg="/images/services/transparentbg/bg.webp" />
       <Additional_Features />
       <Footer />
     </div>
