@@ -86,7 +86,7 @@
   gap: 15px;
 }
 
-.container_bottom {
+/* .container_bottom {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,7 +94,7 @@
   font-size: 16px;
   color: white;
   height: 45px;
-  /* justify-content: space-around; */
+  /* justify-content: space-around; 
   background-color: #141414;
 }
 .container_bottom p {
@@ -103,6 +103,29 @@
 }
 .pracas {
   text-decoration: none;
+} */
+
+.container_bottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #1a1a1a; /* Dark background as per image */
+  padding: 15px 50px;
+  color: white;
+  font-size: 14px;
+}
+.container_bottom p {
+  font-family: "Open Sans";
+  color: white;
+  margin: 0;
+}
+
+.technologyPartner {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .phone_number,
@@ -111,58 +134,126 @@
   color: white;
 }
 
-.technologyPartner {
+/* .technologyPartner {
   display: flex;
   gap: 5px;
   justify-content: center;
   align-items: center;
+} */
+
+.technologyPartner {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
-/* mobile responsive */
+/* Responsive for screens between 801px and 1100px */
+@media screen and (min-width: 801px) and (max-width: 1100px) {
+  .footer_hero_container {
+    flex-direction: row;      /* keep columns in a row */
+    justify-content: space-between; /* spread them evenly */
+    gap: 80px;                /* slightly smaller than large desktop */
+    padding: 50px 40px;       /* moderate padding */
+    flex-wrap: wrap;           /* allow wrapping if necessary */
+  }
 
-@media screen and (max-width: 480px) {
-  .container_footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .footer_header,
+  .footer_nav,
+  .container_contact_info {
+    flex: 1 1 280px;          /* flexible columns with min width */
+    max-width: 320px;         /* prevent columns from getting too wide */
   }
+
+  .footer_header h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
   .footer_header p {
-    max-width: 100%;
+    font-size: 16px;
+    line-height: 24px;
   }
+
+  .social_media_icon_container {
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .footer_nav h2,
+  .container_contact_info h2 {
+    margin-bottom: 15px;
+  }
+
+  .dash_list {
+    line-height: 32px;
+    padding-left: 20px;
+  }
+
+  .nav_btn,
+  .container_contact_info p {
+    font-size: 16px;
+  }
+
+  .location_container,
+  .phone_container,
+  .mail_container {
+    gap: 15px;
+    flex-wrap: wrap; /* allow wrapping if content is long */
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .footer_hero_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Reduced gap from 40px */
+    padding: 30px 20px;
+  }
+
+  .container_bottom {
+    padding: 15px 20px;
+    flex-direction: column; /* Stacked but neat */
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
+
+/* --- Media Query: Mobile (480px) --- */
+@media screen and (max-width: 480px) {
   .footer_hero_container {
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
+    gap: 15px; /* Removed large gaps between categories */
+    padding: 20px 25px; /* Tighter padding */
+  }
 
-    gap: 20px;
-    padding: 30px 35px;
+  /* Remove margin-bottom from titles to tighten space */
+  .footer_nav h2,
+  .container_contact_info h2 {
+    margin-bottom: 8px; 
   }
 
   .footer_nav,
   .container_contact_info {
-    margin-bottom: 15px;
-    width: fit-content;
+    margin-bottom: 5px; /* Tighten vertical gap between sections */
   }
-  .social_media_icon_container {
-    margin-bottom: 10px;
-  }
+
   .container_bottom {
-    flex-direction: column;
-    gap: 10px;
-    height: auto;
-    padding: 10px;
+    padding: 15px 25px; /* Align with hero padding */
+    align-items: center;
+  }
+
+  .technologyPartner {
+    margin-top: 5px;
+    width: 100%;
+    justify-content: center;
   }
   
-  /* for get in touch */
-  .container_contact_info {
-        width:fit-content;
-}
-
-.mail {
-  word-break: break-all;       /* allows breaking long words */
-  overflow-wrap: anywhere;    /* modern & best support */
-}
-.container_bottom p {
- width: 90%;
-}
+  .mail {
+    word-break: break-all;
+    display: block; /* Ensures it sits below the icon if needed */
+    margin-top: 2px;
+  }
 }

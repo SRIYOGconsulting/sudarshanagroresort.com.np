@@ -80,7 +80,7 @@ const Footer = () => {
       <div className={style.container_bottom}>
         <p>Copyright © 2025 Sudarshan Agro Resort. All rights reserved.</p>
         <div className={style.technologyPartner}>
-        <p>Technology Partner: </p>
+          <p>Technology Partner: </p>
           <a
             className={style.pracas}
             href="https://sriyog.com/"
@@ -89,7 +89,7 @@ const Footer = () => {
           >
             SRIYOG
           </a>
-          </div>
+        </div>
       </div>
     </footer>
   );
