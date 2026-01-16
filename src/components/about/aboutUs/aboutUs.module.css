@@ -63,7 +63,7 @@
 
 
 /* mobile responsive */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 780px) {
   .aboutus_container {
   justify-content: flex-start;
 
