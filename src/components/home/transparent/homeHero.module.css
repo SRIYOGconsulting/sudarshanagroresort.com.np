@@ -88,6 +88,40 @@
   }
 }
 
+@media screen and (max-width: 900px){
+  .topcontainer {
+    padding-left: 10%;
+    align-items: flex-start;
+    left:0;
+    width: fit-content;
+  }
+  .top{
+  
+ 
+    font-size: 25px;
+}
+  .comfort{
+   font-size: 25px;
+    margin-right: 5px;
+    
+  }
+  .typing_text {
+    font-size: 25px;
+    margin-left: 0;
+   
+  }
+  .for_your_vacation{
+    font-size: 25px;
+  }
+  .cursor {
+  font-size: 30px;
+  margin-left: 5px;
+  color: white;
+  animation: blink 1s step-start infinite;
+}
+  
+}
+
 
 @media screen and (max-width: 480px){
   .topcontainer {
