@@ -103,6 +103,8 @@ const handleOpenCalendar = (e) => {
       if (Object.keys(newErrors).length === 0) {
     setIsSubmitted(true); 
   }
+  
+  console.log( form);
   };
 
   return (
@@ -401,7 +403,7 @@ const handleOpenCalendar = (e) => {
         </div>
 
         <button className={style.btn_submit} type="submit" > Submit</button>
-        <span className={style.donot_submit}>Do not submit passwords through this form. <button className={style.reportbtn}   type="button"
+        <span className={style.donot_submit}>Do not submit passwords through this form. <br /> <button className={style.reportbtn}   type="button"
   onClick={(e) => {
     e.preventDefault();
     reporthandler();

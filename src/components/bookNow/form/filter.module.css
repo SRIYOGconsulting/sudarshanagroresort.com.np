@@ -50,6 +50,8 @@
   justify-content: space-between; /* 👈 pushes icon to the right */
   position: relative;
   background: white;
+  width: 100%;
+  box-sizing: border-box;
 }
 .dropdownBox:hover{
   /* box-shadow: blue; */
@@ -74,6 +76,8 @@
   background: white;
   border: 1px solid gray;
   z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
 }
 .listofdrop_down{
     width: fit-content;
@@ -116,4 +120,10 @@
 
 
 
+.dropdownIcon {
+  position: absolute;
+  right: 12px;
+  left: auto;
+  pointer-events: none;
+}
 
