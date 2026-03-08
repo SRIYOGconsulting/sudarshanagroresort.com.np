@@ -1,68 +1,66 @@
-/* ################# popup date choose ##################### */
+/* Page Container */
 
-.popup_overlay{
+.viewmore_container {
+  width: 100%;
+}
+
+/* Popup Layout */
+
+.popup_overlay {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
- .popup_content{
+.popup_content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* width: 80%; */
-  max-width: 1100px;
+  max-width: 1200px;
+  width: 100%;
   padding: 20px;
-
 }
 
-.booking_date_form{
-  
+/* ---------------- */
+/* Booking Form */
+/* ---------------- */
+
+.booking_date_form {
   display: flex;
- align-items: center;
- justify-content: center;
+  align-items: center;
+  justify-content: center;
   gap: 15px;
-  margin: 20px 0;
+  margin: 25px 0;
   background-color: #c5c3c3;
   padding: 15px 20px;
   border-radius: 10px;
-  width: 100% ;
- 
-
+  width: 100%;
 }
-.date_input_wrapper{
+
+.date_input_wrapper {
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
-  
+  position: relative;
 }
 
-.date_input_wrapper .icon{
+.icon {
   position: absolute;
-  min-width:20px
-  
-  
+  top: 37px;
+  left: 10px;
 }
-.icon{
-  margin-top: 26px;
-  margin-left: 10px;
-  
-}
-.input_guest{
-  padding: 10px 15px;
-  width: 100%;
+
+.input_guest {
+  padding: 10px 15px 10px 35px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
-  text-align: center;
-  
+  font-size: 15px;
+  width: 200px;
 }
 
-.promoBtn{
+/* Promo Button */
+
+.promoBtn {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 10px;
   padding: 10px 20px;
@@ -72,201 +70,195 @@
   color: rgb(8, 105, 4);
   font-size: 16px;
   font-weight: 550;
-  text-align: center  ;
   background-color: #f3f3f3;
 }
-.promoBtn img{
+
+.promoBtn img {
   width: 20px;
   height: 20px;
 }
 
-/* room details content and image */
+/* ---------------- */
+/* Room Content */
+/* ---------------- */
 
-.popup_room_details{
+.popup_room_details_container {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
-  padding: 20px;
+  gap: 25px;
+  width: 100%;
+}
+
+.img_content_container {
+  display: flex;
+  gap: 30px;
+}
+
+.roomimage {
+  width: 450px;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.content_wrapper {
+  display: flex;
+  flex-direction: column;
   gap: 10px;
 }
-.details_room{
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.paragraph{
-  text-align: justify;
-  line-height: 25px;
-  margin-top: 20px;
-  
+
+.title {
+  margin-bottom: 10px;
 }
 
-.popup_room_details_container{
+.details_room {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 20px;
 }
 
-.img_content_container{
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    gap: 20px;
-}
-
-.roomimage{
-  width: 400px;
-  /* height: 250px; */
-  object-fit: cover;
-}
-.title{
-    margin-bottom: 10px;
-}
-.content_wrapper{
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: flex-start;
-    margin-left: 20px;
-    gap: 10px;
-}
-
-.popup_room_details{
+.All_icon_wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  gap: 10px;
-}
-.All_icon_wrapper{
-  display: flex;
- justify-content: center;
   align-items: center;
   gap: 5px;
 }
-.cancle_icon_text_container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-        border: 2px solid #918383;
-    border-radius: 10px;
-    /* gap: 10px; */
+
+.paragraph {
+  text-align: justify;
+  line-height: 24px;
+  margin-top: 15px;
 }
-.cancle_icon_text_subcontainer{
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
-    gap: 15px;
+
+/* ---------------- */
+/* Bottom Card */
+/* ---------------- */
+
+.cancle_icon_text_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #918383;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
 }
-.cancle_icon_text_wrapper{
-    display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
-    gap: 5px;
+
+.cancle_icon_text_subcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
-.img_content_container{
-    display: flex;
+
+.cancle_icon_text_wrapper {
+  display: flex;
+  gap: 5px;
 }
-.cost_for_night_wrapper{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+
+.para {
+  font-size: 18px;
+  color: green;
 }
-.rupee_wrap{
-    display: flex;
-    align-items: center;
-    gap: 3px;
+
+.paytoday {
+  font-size: 18px;
 }
-.para{
-    font-size: 18px;
-    color: green;
-    
+
+.moreinfo {
+  font-size: 18px;
+  margin-left: 25px;
+  color: green;
 }
-.paytoday{
-       font-size: 18px;
-       
+
+.cost_for_night_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-.moreinfo{
-       font-size: 18px;
-      margin-left: 25px;
-           color: green;
+
+.rupee_wrap {
+  display: flex;
+  align-items: center;
+  gap: 3px;
 }
-.costprice{
-    font-size: 20px;
-      color: rgb(128, 122, 122);
+
+.price {
+  font-size: 24px;
 }
-.price{
-    font-size: 22px;
-  
+
+.costprice {
+  font-size: 18px;
+  color: rgb(128, 122, 122);
 }
-.bookbtn_popup{
-    padding: 15px 40px;
-    font-size: 25px;
-    background-color: rgb(8, 105, 4);
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
-    transition: all 0.3s ease;
+
+/* Booking Button */
+
+.bookbtn_popup {
+  padding: 15px 40px;
+  font-size: 22px;
+  background-color: rgb(8, 105, 4);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
 }
-.bookbtn_popup:hover{
-    box-shadow: 0 6px 18px rgb(25, 0, 255);
+
+.bookbtn_popup:hover {
+  box-shadow: 0 6px 18px rgb(25, 0, 255);
   transform: translateY(-2px);
 }
 
+/* ---------------- */
+/* Tablet */
+/* ---------------- */
 
+@media (max-width: 900px) {
 
-
-
-/* media query  */
-@media (max-width: 480px) {
-  .img_content_container{
+  .img_content_container {
     flex-direction: column;
     align-items: center;
   }
-  .roomimage{
+
+  .roomimage {
     width: 100%;
   }
-  .booking_date_form{
-  flex-direction: column;
-  }
-  .content_wrapper{
+
+  .content_wrapper {
     margin: 0;
   }
-  .details_room{
-    gap: 15px;
-  }
-  .cancle_icon_text_container{
-    padding: 25px;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-  .bookbtn_popup{
-    padding: 10px 20px;
-    font-size: 20px;
-  }
-  .cancle_icon_text_subcontainer{
-    gap: 8px;
-  }
-  .price, .costprice{
-    font-size: 18px;
- 
-  }
-  .cost_for_night_wrapper{
-        margin: 10px 0 15px 0;
-        gap: 5px;
-  }
-   .popup_content{
-
-  width: 100%;
-
 
 }
+
+/* ---------------- */
+/* Mobile */
+/* ---------------- */
+
+@media (max-width: 600px) {
+
+  .booking_date_form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input_guest {
+    width: 100%;
+  }
+
+  .cancle_icon_text_container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .bookbtn_popup {
+    width: 100%;
+    text-align: center;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+
+  .costprice {
+    font-size: 16px;
+  }
+
 }

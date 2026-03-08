@@ -1,31 +1,40 @@
-
 .containerallwrap{
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 40px;
-    padding:100px 21px;;
-    margin-left: 50px;
-    
-   
+    justify-content: flex-start; /* prevent big spacing */
+    gap: 50px;                   /* required gap */
+    padding: 100px 60px;
+    width: 100%;
 }
+
+/* map side will grow */
+.containerallwrap > div:first-child{
+    flex: 1;
+}
+
+/* right content */
 .contentWrapper{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    gap: 50px;
+    justify-content: center;
+    gap: 40px;
+    max-width: 500px;
+    flex: 0 0 420px;  /* fixed contact width */
 }
 .sudarshanresort_header_line_wrapper{
     width: 100%;
-    
 }
+
+.sudarshanresort_header_line_wrapper h1{
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 32px;
+}
+
 .Each_content_container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-   
 }
-
 
 .h2{
     font-family: 'Poppins';
@@ -33,12 +42,12 @@
     font-size: 20px;
     color: #242424;
 }
+
 .icon_and_p_wrapper{
     display: flex;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 12px;
     gap: 10px;
-    
 }
 
 .icon_and_p_wrapper p{
@@ -48,26 +57,40 @@
 }
 
 .line{
-    margin-top: 20px;
+    margin-top: 18px;
     width: 100%;
-    /* width: 350px; */
     border-bottom: 1px solid #D4D4D4;
-    
+}
+
+
+/* -------- Tablet -------- */
+
+@media screen and (max-width: 992px){
+
+.containerallwrap{
+    padding: 70px 25px;
+    gap: 10px; /* map and contact gap */
+}
+
+.contentWrapper{
+    max-width: 420px;
+}
 
 }
-@media screen and (max-width:480px) {
-    .containerallwrap{
+
+
+/* -------- Mobile -------- */
+
+@media screen and (max-width: 600px){
+
+.containerallwrap{
     flex-direction: column;
-    justify-content:space-around;
-    margin-left: 0;
-    
+    padding: 50px 20px;
+    gap: 25px;
 }
-.line{
-    width: 100%;
-    
-}
+
 .contentWrapper{
-    line-break: anywhere;
+    max-width: 100%;
 }
 
 }

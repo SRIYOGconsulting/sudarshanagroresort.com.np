@@ -1,16 +1,32 @@
-
 .containermap{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
 }
+
 .mapSize{
-   width:700px ;
-height:450px ;
-}
-@media screen and (max-width:480px) {
-    .mapSize{
    width:100%;
-height:300px ;
+   height:450px;
 }
+
+/* -------- Tablet -------- */
+
+@media screen and (max-width:992px){
+
+.mapSize{
+   width:100%;
+   max-width:500px;
+   height:380px;
+}
+
+}
+
+
+/* -------- Mobile -------- */
+
+@media screen and (max-width:600px){
+
+.mapSize{
+   width:100%;
+   height:300px;
+}
+
 }

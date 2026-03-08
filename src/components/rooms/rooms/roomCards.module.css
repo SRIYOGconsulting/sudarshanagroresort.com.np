@@ -1,47 +1,84 @@
 .roomcard_container {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  
-  
-  padding: 100px 0;
+  padding: 80px 20px;
   background-color: #f3f3f3;
 }
-.roo {
-  display: grid;
-  grid-template-columns: repeat(3,400px);
-  gap: 40px; 
 
+/* GRID */
+.roo {
+  width: 100%;
+  max-width: 1300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
 }
 
-.imageWrapper {
-  position: relative;
-  width: 400px;
-  height: 260px;
+/* CARD */
+.roomcard {
+  background-color: white;
+  width: 100%;
+  border-radius: 6px;
   overflow: hidden;
 }
 
-
+/* IMAGE */
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
 
 .imageWrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.4s ease;
 }
 
-.imageWrapper:hover .overlay {
+.imageWrapper:hover img {
+  transform: scale(1.1);
+}
+
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* BOOK BUTTON */
+.bookbtn {
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: green;
+  text-decoration: none;
+  transform: translateY(100px);
+  transition: 0.4s ease;
+  opacity: 0;
+}
+
+.imageWrapper:hover .bookbtn {
+  transform: translateY(0);
   opacity: 1;
 }
-.roomcard{
+
+.bookbtn:hover {
   background-color: white;
+  color: green;
 }
+
+/* CONTENT */
 .roomcard_content {
   display: flex;
   flex-direction: column;
-  padding: 25px ;
-
- 
+  padding: 20px;
 }
 
 .price_container {
@@ -51,166 +88,113 @@
   gap: 10px;
 }
 
-
-.list_details{
-  /* position: relative; */
-}
-
-/* details of room */
-.details_room.details_room {
+.details_room {
   display: flex;
   align-items: center;
   gap: 5px;
 }
-.ratting_and_rating_number_wrapper{
+
+/* RATING */
+.ratting_and_rating_number_wrapper {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
-.stars_wrapper{
+
+.stars_wrapper {
   display: flex;
-  align-items: center;
-  width: fit-content;
   gap: 2px;
 }
-.rating{
+
+.rating {
   background-color: green;
   border-radius: 5px;
-  padding: 5px;
-  width: fit-content;
+  padding: 4px 6px;
+  color: white;
 }
-.rating_review_wrapper{
+
+.rating_review_wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-.line{
+
+.line {
   width: 100%;
   height: 1px;
   background-color: #dbdbdb;
   margin: 10px 0;
 }
-.earthroom_plus_wrapper{
+
+.earthroom_plus_wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 5px;
 }
-.earthroom_plus_wrapper img{
+
+.earthroom_plus_wrapper img {
   width: 15px;
   height: 15px;
   cursor: pointer;
 }
-.choose_date_button_wrapper{
+
+/* BUTTON */
+.choose_date_button_wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-top: 15px;
 }
-.choose_date_button{
+
+.choose_date_button {
   padding: 10px 40px;
   border: 1px solid green;
   text-decoration: none;
-  cursor: pointer;
   border-radius: 20px;
   color: rgb(8, 105, 4);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 550;
-  text-align: center  ;
-
+  transition: 0.3s;
 }
-.choose_date_button:hover{
+
+.choose_date_button:hover {
   background-color: rgb(8, 105, 4);
   color: white;
 }
 
+/* ---------- RESPONSIVE BREAKPOINTS ---------- */
 
-
-/* animations on image hover */
-.imageWrapper {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.imageWrapper img {
-  width: 100%;
-  transition: 0.4s ease;
-}
-.imageWrapper:hover img {
-  transform: scale(1.1);
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 1;
-  transition: 0.2s ease-in-out;
-}
-
-/* show on hover */
-.imageWrapper:hover .overlay {
-  opacity: 1;
-}
-
-.bookbtn {
-  padding: 10px 30px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  /* border-radius: 5px; */
-  color: white;
-  background-color: green;
-  text-decoration: none;
-  transform: translateY(100px);
-  transition: 0.4s ease;
-  opacity: 0;
-  font-weight: 200;
-}
-.bookbtn:hover{
-  background-color: white;
-  color: green;
-}
-
-.imageWrapper:hover .bookbtn {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-
-
-
-
-
-@media screen and (max-width:480px)  {
- 
- .roomcard_container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-
- }
-  .roo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* Tablet */
+@media (max-width: 900px) {
+  .roo {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   }
-  .imageWrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+  .imageWrapper {
+    height: 220px;
   }
-  .imageWrapper img{
-    
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .roomcard_container {
+    padding: 50px 15px;
+  }
+
+  .roo {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .imageWrapper {
+    height: 200px;
+  }
+
+  .roomcard_content {
+    padding: 18px;
+  }
+
+  .choose_date_button {
     width: 100%;
+    text-align: center;
   }
-  
 }
