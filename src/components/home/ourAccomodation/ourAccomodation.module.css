@@ -5,16 +5,16 @@
   justify-content: center;
   align-items: center;
   background-color: #f4f4f4;
-  padding: 100px 0;
+  padding: 100px 20px;
 }
 
 .container_accomodation {
   display: flex;
-  padding: 20px;
   align-items: center;
-  justify-content: center;
-  gap: 460px;
-  background-color: #f4f4f4;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  gap: 40px;
 }
 
 .content_wrap {
@@ -47,8 +47,7 @@
   font-family: "Poppins";
   font-weight: 500;
   color: #242424;
-  width: 202px;
-  max-width: 100%;
+  width: 200px;
   line-height: 52px;
   text-align: center;
   text-decoration: none;
@@ -66,18 +65,24 @@
   display: flex;
   justify-content: center;
   gap: 30px;
-  margin-top: 25px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .img_wrap {
   position: relative;
   overflow: hidden;
-  width: 550px;
-  height: 400px;
+  width: 100%;
+  max-width: 520px;
+  height: 360px;
 }
 
 .img1 {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Overlay animation */
@@ -87,8 +92,7 @@
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
   transform: translateY(100%);
-  transition: transform 0.7s ease;
-  pointer-events: none;
+  transition: transform 0.6s ease;
 }
 
 .img_wrap:hover::before {
@@ -104,14 +108,14 @@
   padding: 12px 25px;
   font-size: 18px;
   font-family: "Poppins";
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   text-decoration: none;
 }
 
 .img_wrap:hover .book_now {
   opacity: 1;
-  color: #ffffff;
-  border-bottom: 2px solid #ffffff;
+  color: white;
+  border-bottom: 2px solid white;
   transform: translate(-50%, -50%) scale(1);
 }
 
@@ -123,13 +127,7 @@
   font-size: 20px;
   font-family: "Poppins";
   font-weight: 500;
-  transform: translateY(-50px);
-  transition: all 0.35s ease;
-}
-
-.img_wrap:hover .p1 {
-  transform: translate(200px, -250px);
-  font-size: 18px;
+  transition: all 0.3s ease;
 }
 
 .start_price {
@@ -143,74 +141,68 @@
   border-radius: 4px;
   font-size: 15px;
   font-family: "Poppins";
-  transform: translateY(40px);
-  transition: all 0.35s ease;
 }
 
 .start_price:hover {
   background-color: #302e2d;
 }
 
-.img_wrap:hover .start_price {
-  transform: translate(160px, -160px);
-  padding: 5px 15px;
-  cursor: pointer;
+/* ========================= */
+/* Tablet Responsive (1024px) */
+/* ========================= */
+@media screen and (max-width: 1024px) {
+  .container_accomodation {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .images_div {
+    gap: 20px;
+  }
+
+  .img_wrap {
+    max-width: 450px;
+    height: 320px;
+  }
 }
 
-/* Mobile Responsive */
-@media screen and (max-width: 480px) {
-
+/* ========================= */
+/* Tablet / Mobile (768px) */
+/* ========================= */
+@media screen and (max-width: 768px) {
   .container_accomodation_top {
-    padding: 50px 0;
+    padding: 60px 20px;
   }
 
   .container_accomodation {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
-    width: 100%;
-    padding-left: 45px;
-  }
-
-  .content_wrap {
-    width: 100%;
   }
 
   .p_and_div {
     flex-direction: column;
-    gap: 5px;
-  }
-
-  .line_horizontal {
-    margin-top: 5px;
   }
 
   .btn {
-    margin-top: 20px;
+    margin-top: 15px;
   }
 
   .images_div {
     flex-direction: column;
-    width: 80%;
-    gap: 20px;
     align-items: center;
+    width: 100%;
   }
-  
 
   .img_wrap {
-    width: 100%;
-    max-width: 370px;
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 100%;
+    height: 260px;
   }
 
-  /* Mobile hover adjustments */
   .img_wrap:hover .p1 {
     transform: translate(115px, -140px);
     font-size: 16px;
-    
   }
 
   .img_wrap:hover .start_price {
@@ -224,5 +216,26 @@
   .img_wrap:hover .book_now {
     transform: translate(-50%, 35px) scale(1);
     font-size: 16px;
+  }
+}
+
+/* ========================= */
+/* Small Mobile (480px) */
+/* ========================= */
+@media screen and (max-width: 480px) {
+  .p_line_positioning {
+    font-size: 16px;
+  }
+
+  .img_wrap {
+    height: 220px;
+  }
+
+  .p1 {
+    font-size: 16px;
+  }
+
+  .start_price {
+    font-size: 13px;
   }
 }
