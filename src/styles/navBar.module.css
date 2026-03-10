@@ -132,6 +132,7 @@
 .menu {
   display: none;
   cursor: pointer;
+  padding-right:10PX ;
 }
 
 .mobileMenu {
