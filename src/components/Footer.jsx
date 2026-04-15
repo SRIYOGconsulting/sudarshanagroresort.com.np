@@ -1,99 +1,152 @@
+import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { useState, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Linkedin, Mail, MapPin, PhoneCall } from 'lucide-react';
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+
+  useEffect(() => {
+    emailjs.init("4ufjEe2FuYXd9ArD0");
+  }, []);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await emailjs.send(
+        "service_z40lehq",
+        "template_0waivfi",
+        { email }
+      );
+
+      alert("Subscribed successfully");
+      setEmail("");
+    } catch (error) {
+      console.error("FULL ERROR:", error);
+      alert("Failed to send");
+    }
+  };
+
   return (
-    <footer className="bg-[#008000] font-sans">
-      <div className="max-w-6xl mx-auto flex flex-col text-white">
-        {/* Footer Hero Section */}
-        <div className="flex flex-col md:flex-row justify-between items-start gap-8 p-16">
-          {/* About / Description */}
-          <div className="flex flex-col w-full md:w-2/3">
-            <div className=""> 
-              <h1 className="text-3xl font-semibold">Sudarshan Agro Resort</h1>
-              <p className="text-sm leading-6 mt-4">
-                Enjoy your recreational time with Sudarshan Park and Resort in a Nepali Style.
-                We offer you the best hospitality for your golden memories.
-              </p>
-              {/* Social Media Icons */}
-              <div className="flex gap-6 mt-6">
-                <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook"
-                >
-                  <Facebook color="white" size={22} />
-                </a>
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                >
-                  <Instagram color="white" size={22} />
-                </a>
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin color="white" size={22} />
-                </a>
-              </div>
-            </div>
+    <footer className="bg-gradient-to-r from-green-900 via-green-800 to-green-900 text-gray-200">
+      
+      <div className="max-w-7xl mx-auto px-10 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
+
+          {/* ABOUT */}
+          <div className="max-w-sm">
+            <h2 className="text-white text-lg font-semibold mb-5">
+              Sudarshan Agro Resort
+            </h2>
+            <p className="text-sm text-gray-300 leading-7">
+              Enjoy your recreational time with Sudarshan Park and Resort in a Nepali style.
+              We offer you the best hospitality for your golden memories.
+            </p>
           </div>
 
-          {/* Quick Links */}
-          <div className="flex flex-col w-full md:w-1/3">
-            <h2 className="text-2xl font-semibold">Quick Links</h2>
-            <ul className="list-none pl-5 space-y-2 mt-4">
-              <li><Link className="text-white hover:text-[#0000EE] text-sm" to="/gallery">- Gallery</Link></li>
-              <li><Link className="text-white hover:text-[#0000EE] text-sm" to="/contact">- Contact</Link></li>
-              <li><Link className="text-white hover:text-[#0000EE] text-sm" to="/services">- Services</Link></li>
-              <li><Link className="text-white hover:text-[#0000EE] text-sm" to="/rooms">- Rooms</Link></li>
+          {/* CONTACT */}
+          <div>
+            <h3 className="text-white text-sm font-semibold mb-5">Contact</h3>
+            <p className="text-sm text-gray-300 leading-7">
+              Lalbhitti, Belbari-2, Morang, Nepal <br />
+              +977-9852020058 <br />
+              booking@sudarshanagroresort.com.np
+            </p>
+          </div>
+
+          {/* LINKS */}
+          <div>
+            <h3 className="text-white text-sm font-semibold mb-5">Quick Links</h3>
+            <ul className="space-y-3 text-sm text-gray-300">
+              <li>
+                <a href="/gallery" className="hover:text-white transition hover:pl-1">
+                  Gallery
+                </a>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-white transition hover:pl-1">
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="hover:text-white transition hover:pl-1">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/rooms" className="hover:text-white transition hover:pl-1">
+                  Rooms
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Contact Info */}
-          <div className="flex flex-col w-full md:w-1/3">
-            <h2 className="text-2xl font-semibold">Get in Touch</h2>
-            <div className="flex items-center gap-4 mb-4 mt-4">
-              <MapPin className="text-white" size={20} />
-              <a href="https://www.google.com/maps/dir//Sudarshan+Resort+Belbari+56600/@26.6581597,87.4082572,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x39ef658a3db38a5d:0xbfd3187bf701d864" target="_blank" className="text-[#0000EE] underline text-sm">Lalbhitti, Belbari-2, Morang, Nepal</a>
-            </div>
-            <div className="flex items-center gap-4 mb-4">
-              <PhoneCall className="text-white" size={20} />
-              <a href="tel:+9779852020058" className="text-[#0000EE] underline text-sm">+977-9852020058</a>
-            </div>
-            <div className="flex items-center gap-4 mb-4">
-              <Mail className="text-white" size={20} />
-              <a href="mailto:booking@sudarshanagroresort.com.np" className="text-[#0000EE] underline text-sm">
-                booking@sudarshanagroresort.com.np
-              </a>
+          {/* NEWSLETTER */}
+          <div className="max-w-64">
+            <h3 className="text-white text-sm font-semibold mb-5">Newsletter</h3>
+
+            <form
+              onSubmit={handleSubmit}
+              className="flex items-center border-b border-gray-400 pb-2"
+            >
+              <input
+                type="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="bg-transparent flex-1 text-sm outline-none placeholder-gray-400"
+                required
+              />
+              <button type="submit" className="text-white text-lg ml-2">
+                {">"}
+              </button>
+            </form>
+
+            {/* SOCIALS */}
+            <div className="flex gap-4 mt-6">
+              {[
+                { Icon: Facebook, link: "https://facebook.com" },
+                { Icon: Instagram, link: "https://instagram.com" },
+                { Icon: Linkedin, link: "https://linkedin.com" },
+              ].map(({ Icon, link }, i) => (
+                <a
+                  key={i}
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="w-9 h-9 flex items-center justify-center rounded-full bg-white text-black hover:bg-[#f0c419] transition">
+                    <Icon size={16} />
+                  </div>
+                </a>
+              ))}
             </div>
           </div>
+
         </div>
       </div>
 
-      {/* Footer Bottom */}
-      <div className="bg-[#141414]">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-white p-4">
-          <p className="text-sm">Copyright © 2025 Sudarshan Agro Resort. All rights reserved.</p>
-          <p className="text-sm">
+      <div className="border-t border-white/10"></div>
+
+      <div className="bg-[#062e06]">
+        <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-gray-400">
+          <p>© 2025 Sudarshan Agro Resort. All rights reserved.</p>
+
+          <p>
             Technology Partner:
             <a
-              className="text-[#0000EE] underline"
               href="https://sriyog.com/"
               target="_blank"
               rel="noopener noreferrer"
+              className="ml-1 text-white hover:underline"
             >
               SRIYOG
             </a>
           </p>
         </div>
       </div>
+
     </footer>
   );
 };
