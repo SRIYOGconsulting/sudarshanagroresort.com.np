@@ -4,6 +4,7 @@ const SeoHelmet = ({ title, description, image, url }) => {
   return (
     <Helmet>
       <title>{title}</title>
+<meta name="google-site-verification" content="mPMcqSmR9UwtO8RI8RoCL4GE7vztochFjIs0ZEn9K50" />
       <meta name="description" content={description} />
       {/* for og */}
       <meta property="og:title" content={title} />

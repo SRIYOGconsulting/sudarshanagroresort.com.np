@@ -17,7 +17,7 @@ const Gallery = () => {
         image="/images/gallery/1.jpg"
         url="https://sudarshanresort.com/gallery"
       />
-      
+      <h1 className="sr-only">Gallery | Sudarshan Resort</h1>
       {/* <Top/> */}
       <Navbar/>
      <Herosection 
@@ -26,6 +26,7 @@ const Gallery = () => {
   p="Gallery"
   bg="images/about/SudarshanAbout.webp"
 />
+ 
       <Allcards/>
       <Footer/>
       

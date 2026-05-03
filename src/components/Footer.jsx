@@ -69,16 +69,21 @@ const Footer = () => {
 
             {/* SOCIALS */}
             <div className="flex gap-4 mt-5">
-              {[Facebook, Instagram, Linkedin].map((Icon, i) => (
-                <div
-                  key={i}
+              {[{ Icon: Facebook, link: "https://www.facebook.com" }, { Icon: Instagram, link: "https://www.instagram.com" }, { Icon: Linkedin, link: "https://www.linkedin.com" }].map(({ Icon, link }, i) => (
+                <a
+                  key={i} 
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition cursor-pointer"
                 >
+                    <div className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition cursor-pointer">
                   <Icon className="w-4 h-4 text-gray-300 hover:text-white" />
                 </div>
+                </a>
               ))}
             </div>
-          </div>
+       </div>
 
           {/* QUICK LINKS */}
           <div>
