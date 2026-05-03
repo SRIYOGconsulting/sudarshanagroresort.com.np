@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin } from "lucide-react"; 
+import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -6,87 +6,89 @@ import emailjs from "@emailjs/browser";
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubscribe = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
-      // ✅ 1. Save to Formspree
       await fetch("https://formspree.io/f/mgorjpyp", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json"
+          Accept: "application/json",
         },
         body: JSON.stringify({
-          email: email,
-          type: "newsletter"
-        })
+          email,
+          type: "newsletter",
+        }),
       });
 
-      // ✅ 2. Send welcome email (EmailJS)
       await emailjs.send(
         "service_jfkkf89",
         "template_hi03tnf",
-        {
-          email: email
-        },
+        { email },
         "fn-kr1dma-v26TXtl"
       );
 
       setSuccess(true);
       setEmail("");
-
     } catch (error) {
       console.error(error);
       alert("Subscription failed");
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <footer className="bg-[#0f3d1f] text-gray-200">
+    <footer className="bg-[#0f3d1f] text-gray-300">
+      <div className="max-w-7xl mx-auto px-6 py-16">
 
-      <div className="max-w-7xl mx-auto px-6 py-14">
-
-        {/* 🔥 reduced gap from 10 → 6 */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        {/* GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
           {/* BRAND */}
           <div>
-            <h2 className="text-white text-lg font-semibold mb-3">
-              Sudarshan Agro Resort
-            </h2>
+            <Link to="/" className="flex items-center gap-3 mb-4">
+              <img
+                src="/favicon/logo.png"
+                alt="Sudarshan Agro Resort"
+                className="w-10 h-10 rounded-full object-cover"
+              />
+              <span className="text-white font-semibold text-lg">
+                Sudarshan Agro Resort
+              </span>
+            </Link>
 
-            <p className="text-gray-300 text-[15px] leading-7">
-              Experience peaceful living surrounded by nature.
-              A perfect escape where comfort meets Nepali hospitality.
+            <p className="text-sm leading-relaxed opacity-80">
+              Experience peaceful getaways with authentic Nepali hospitality.
+              Creating memorable stays surrounded by nature.
             </p>
 
-            <div className="flex gap-[14px] mt-[5px]">
+            {/* SOCIALS */}
+            <div className="flex gap-4 mt-5">
               {[Facebook, Instagram, Linkedin].map((Icon, i) => (
-                <a
+                <div
                   key={i}
-                  href="#"
-                  className="p-2 border border-white/20 rounded-md hover:bg-white hover:text-black transition"
+                  className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition cursor-pointer"
                 >
-                  <Icon size={16} />
-                </a>
+                  <Icon className="w-4 h-4 text-gray-300 hover:text-white" />
+                </div>
               ))}
             </div>
           </div>
 
-          {/* LINKS */}
+          {/* QUICK LINKS */}
           <div>
-            <h3 className="text-white text-sm font-semibold mb-3">
-              Quick Links
-            </h3>
-
-            <ul className="space-y-2 text-sm text-gray-300">
+            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-2">
               {["Home", "Rooms", "Services", "Gallery", "Contact"].map((item) => (
                 <li key={item}>
                   <Link
                     to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                    className="hover:text-white transition"
+                    className="text-sm opacity-80 hover:opacity-100 hover:text-white transition"
                   >
                     {item}
                   </Link>
@@ -97,26 +99,41 @@ const Footer = () => {
 
           {/* CONTACT */}
           <div>
-            <h3 className="text-white text-sm font-semibold mb-3">
-              Contact
-            </h3>
+            <h3 className="text-white font-semibold mb-4">Contact</h3>
 
-            <p className="text-sm text-gray-300 leading-6">
-              Lalbhitti, Belbari-2<br />
-              Morang, Nepal<br /><br />
-              +977-9852020058<br />
-              booking@sudarshanagroresort.com.np
-            </p>
+            <ul className="space-y-3 text-sm">
+              <li className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 mt-1" />
+                Lalbhitti, Belbari-2, Morang, Nepal
+              </li>
+
+              <li className="flex items-center gap-2">
+                <Phone className="w-4 h-4" />
+                <a href="tel:+9779852020058" className="hover:text-white">
+                  +977-9852020058
+                </a>
+              </li>
+
+              <li className="flex items-center gap-2">
+                <Mail className="w-4 h-4" />
+                <a
+                  href="mailto:booking@sudarshanagroresort.com.np"
+                  className="hover:text-white"
+                >
+                  booking@sudarshanagroresort.com.np
+                </a>
+              </li>
+            </ul>
           </div>
 
           {/* NEWSLETTER */}
           <div>
-            <h3 className="text-white text-sm font-semibold mb-3">
-              Stay Updated
+            <h3 className="text-white font-semibold mb-4">
+              Subscribe to our Newsletter
             </h3>
 
-            <p className="text-sm text-gray-300 mb-4">
-              Get updates and offers.
+            <p className="text-sm opacity-80 mb-4">
+              Get exclusive offers and updates directly in your inbox.
             </p>
 
             {success ? (
@@ -124,46 +141,45 @@ const Footer = () => {
                 Subscribed successfully ✅
               </p>
             ) : (
-              <form
-                onSubmit={handleSubscribe}
-                className="flex items-center bg-white rounded-md overflow-hidden max-w-[300px]"
-              >
+              <form onSubmit={handleSubscribe} className="space-y-3">
                 <input
                   type="email"
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Your email"
-                  className="flex-1 px-[16px] h-full bg-white text-black outline-none"
+                  placeholder="Enter your email"
+                  className="w-full px-4 py-2 rounded-md bg-white text-black outline-none"
                 />
 
-                {/* 🔥 IMPROVED BUTTON */}
                 <button
                   type="submit"
-                  className="bg-[#7fbf42] px-4 py-2 text-white font-semibold hover:bg-[#6aa835] transition flex items-center justify-center"
+                  disabled={loading}
+                  className="w-full bg-[#7fbf42] py-2 rounded-md text-white font-medium hover:bg-[#6aa835] transition disabled:opacity-50"
                 >
-                  →
+                  {loading ? "Subscribing..." : "Subscribe"}
                 </button>
               </form>
             )}
           </div>
-
         </div>
       </div>
 
       {/* BOTTOM */}
-      <div className="border-t border-white/10 text-center text-xs py-4 text-gray-400">
-        © 2025 Sudarshan Agro Resort · Technology Partner{" "}
-        <a
-          href="https://sriyog.com/"
-          target="_blank"
-          rel="noreferrer"
-          className="text-white hover:underline"
-        >
-          SRIYOG
-        </a>
+      <div className="border-t border-white/10 py-5 text-center text-xs text-gray-400">
+        © 2026 Sudarshan Agro Resort. All rights reserved.
+        <br />
+        <span className="opacity-70">
+          Technology Partner{" "}
+          <a
+            href="https://sriyog.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-white hover:underline"
+          >
+            SRIYOG
+          </a>
+        </span>
       </div>
-
     </footer>
   );
 };
