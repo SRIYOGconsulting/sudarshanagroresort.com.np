@@ -17,7 +17,7 @@ const SeoHelmet = ({
         content={description}
       />
 
-    <meta name="google-site-verification" content="mPMcqSmR9UwtO8RI8RoCL4GE7vztochFjIs0ZEn9K50" />
+
 
       {/* CANONICAL */}
       <link rel="canonical" href={url} />
