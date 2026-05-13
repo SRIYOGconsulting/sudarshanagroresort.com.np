@@ -68,7 +68,7 @@ const Footer = () => {
             </p>
 
             {/* SOCIALS */}
-            <div className="flex gap-4 mt-5">
+            <div  className="flex gap-4 mt-5">
               {[{ Icon: Facebook, link: "https://www.facebook.com" }, { Icon: Instagram, link: "https://www.instagram.com" }, { Icon: Linkedin, link: "https://www.linkedin.com" }].map(({ Icon, link }, i) => (
                 <a
                   key={i} 
@@ -143,7 +143,7 @@ const Footer = () => {
 
             {success ? (
               <p className="text-green-400 text-sm">
-                Subscribed successfully ✅
+                Subscribed successfully 
               </p>
             ) : (
               <form onSubmit={handleSubscribe} className="space-y-3">
@@ -153,7 +153,7 @@ const Footer = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
-                  className="w-full px-4 py-2 rounded-md bg-white text-black outline-none"
+                  className="w-full px-4 py-3 rounded-lg bg-white text-black outline-none focus:ring-2 focus:ring-[#7fbf42]"
                 />
 
                 <button

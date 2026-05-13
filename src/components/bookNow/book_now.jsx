@@ -20,7 +20,8 @@ const Book_now = () => {
       <Nav_bar />
       <Herosection 
   h1="Booking Form" 
- 
+ tab="Rooms" 
+  p="Booking Form"
   bg="images/about/SudarshanAbout.webp"
 />
       <Booking_Form />

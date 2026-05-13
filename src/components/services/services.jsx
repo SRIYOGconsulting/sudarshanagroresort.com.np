@@ -50,7 +50,7 @@ const Services = () => {
         <p></p>
 
         <Link to="/rooms" className={styles.cta_btn}>
-          Book Now
+      
         </Link>
       </section>
 
