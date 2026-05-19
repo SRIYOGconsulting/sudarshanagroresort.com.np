@@ -18,7 +18,7 @@ const Services = () => {
         title="Services | Sudarshan Resort"
         description="Explore services at Sudarshan Resort including stays, agro experiences, and premium amenities."
         image="/images/services/transparentbg/bg.jpg"
-        url="https://sudarshanresort.com/services"
+        url="https://sudarshanagroresort.com.np/services"
       />
 
       {/* NAV */}
@@ -45,12 +45,13 @@ const Services = () => {
       <section className={styles.section}>
         <Additional_Features />
       </section>
-<section className={styles.cta}>
-        <h2></h2>
-        <p></p>
+
+      <section className={styles.cta}>
+        <h2>Ready to book your Sudarshan resort escape?</h2>
+        <p>Explore our rooms, services, and agro experiences, then reserve a peaceful nature stay with easy online booking.</p>
 
         <Link to="/rooms" className={styles.cta_btn}>
-      
+          View Rooms
         </Link>
       </section>
 

@@ -6,7 +6,7 @@ const Promoting = () => {
 
       {/* 🌿 HERO IMAGE */}
       <div className={style.hero}>
-        <img src="images/about/promoting/1.webp" alt="Tourism" />
+        <img src="images/about/promoting/1.webp" alt="Tourism" loading="lazy" decoding="async" />
 
         <div className={style.hero_overlay}>
           <span>Our Vision</span>
@@ -23,14 +23,14 @@ const Promoting = () => {
        <div className={style.grid}>
 
         <div className={style.card_large}>
-          <img src="images/about/promoting/2.webp" alt="Nature" />
+          <img src="images/about/promoting/2.webp" alt="Nature" loading="lazy" decoding="async" />
           <div className={style.card_overlay}>
             <h3>Nature</h3>
           </div>
         </div>
 
         <div className={style.card_small}>
-          <img src="images/about/promoting/3.webp" alt="Culture" />
+          <img src="images/about/promoting/3.webp" alt="Culture" loading="lazy" decoding="async" />
           <div className={style.card_overlay}>
             <h3>Culture</h3>
           </div>

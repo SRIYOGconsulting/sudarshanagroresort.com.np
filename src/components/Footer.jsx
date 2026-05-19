@@ -53,8 +53,10 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center gap-3 mb-4">
               <img
-                src="/favicon/logo.png"
+                src="/logo.png"
                 alt="Sudarshan Agro Resort"
+                loading="lazy"
+                decoding="async"
                 className="w-10 h-10 rounded-full object-cover"
               />
               <span className="text-white font-semibold text-lg">

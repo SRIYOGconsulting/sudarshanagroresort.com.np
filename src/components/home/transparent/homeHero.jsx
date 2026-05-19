@@ -55,14 +55,14 @@ const HeaderContent = () => {
       <div className={style.topcontainer}>
         <p className={style.top}>Luxury hotel & Resort Lifestyle</p>
 
-      
-
-        <div className={style.typing_container} aria-hidden="true">
-          <h1 className={style.comfort}>Comfort</h1>
-          <span className={style.typing_text}>
+        <div className={style.typing_container} aria-labelledby="hero-heading">
+          <h1 id="hero-heading" className={style.comfort}>
+            Sudarshan Agro Resort – Luxury Nature Stay in Nepal
+          </h1>
+          <p className={style.typing_text} aria-hidden="true">
             {texts[index].substring(0, subIndex)}
-          </span>
-          <span className={`${style.cursor} ${blink ? style.blink : ""}`}>|</span>
+            <span className={`${style.cursor} ${blink ? style.blink : ""}`}>|</span>
+          </p>
         </div>
 
         <div className={style.h1_Link_btn_wrapper}>

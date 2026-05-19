@@ -17,7 +17,7 @@ const QRm = () => {
         title="QR | Sudarshan Resort"
         description="Get in touch with Sudarshan Resort for reservations, inquiries, or any assistance. We are here to make your stay memorable."
         image="/images/contact/whatsapplogo.webp"
-        url="https://sudarshanresort.com/contact"
+        url="https://sudarshanagroresort.com.np/qr"
       />
       
         {/* <Top /> */}

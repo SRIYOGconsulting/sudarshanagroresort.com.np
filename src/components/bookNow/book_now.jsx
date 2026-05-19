@@ -14,7 +14,7 @@ const Book_now = () => {
         title="Booking Form | Sudarshan Resort"
         description="Book your stay at Sudarshan Resort easily with our online booking form. Choose your preferred room and dates for a memorable stay."
         image="/images/rooms/room1.jpg"
-        url="https://sudarshanresort.com/booking"
+        url="https://sudarshanagroresort.com.np/booking"
       />
       {/* <Top /> */}
       <Nav_bar />

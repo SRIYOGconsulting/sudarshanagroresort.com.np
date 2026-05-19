@@ -13,7 +13,7 @@ const Room = () => {
         title="Rooms | Sudarshan Resort"
         description="Discover luxurious rooms at Sudarshan Resort. Enjoy modern amenities, cozy interiors, and peaceful stays surrounded by nature."
         image="/images/rooms/room1.jpg"
-        url="https://sudarshanresort.com/rooms"
+        url="https://sudarshanagroresort.com.np/rooms"
       />
 
       <Nav_Bar />

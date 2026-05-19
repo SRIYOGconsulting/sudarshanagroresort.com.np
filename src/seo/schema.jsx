@@ -10,12 +10,12 @@ const Schema = () => {
       "@type": "Hotel",
 
       "name": "Sudarshan Agro Resort",
-      "url": "https://sudarshanresort.com",
+      "url": "https://sudarshanagroresort.com.np",
 
       "image": [
-        "https://sudarshanresort.com/images/home/SudarshanHome.jpg",
-        "https://sudarshanresort.com/images/rooms/room1.webp",
-        "https://sudarshanresort.com/images/rooms/room2.webp"
+        "https://sudarshanagroresort.com.np/images/home/SudarshanHome.jpg",
+        "https://sudarshanagroresort.com.np/images/rooms/room1.webp",
+        "https://sudarshanagroresort.com.np/images/rooms/room2.webp"
       ],
 
       "description":

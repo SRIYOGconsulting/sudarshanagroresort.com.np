@@ -31,7 +31,7 @@ const Nav_Bar = () => {
         {/* LOGO */}
         <Link to="/">
           <img
-            src="/favicon/logo.png"
+            src="/logo.png"
             alt="logo"
             className="h-[70px] w-[70px] object-cover rounded-full"
           />
@@ -107,9 +107,10 @@ const Nav_Bar = () => {
         ))}
 
         {/* MOBILE BOOK BUTTON */}
-        <Link
-          to="https://d.sriyog.com/sudarshanresort"
+        <a
+          href="https://d.sriyog.com/sudarshanresort"
           target="_blank"
+          rel="noopener noreferrer"
           className="mt-6"
         >
           <button className="px-6 py-3 rounded-full
@@ -117,7 +118,7 @@ const Nav_Bar = () => {
             hover:bg-[#a8825f] transition">
             Book Now
           </button>
-        </Link>
+        </a>
       </div>
     </>
   );

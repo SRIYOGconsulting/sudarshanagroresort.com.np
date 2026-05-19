@@ -46,14 +46,34 @@ const SeoHelmet = ({
       />
 
       <meta
+        property="og:image:alt"
+        content={title}
+      />
+
+      <meta
         property="og:url"
         content={url}
+      />
+
+      <meta
+        property="og:locale"
+        content="en_US"
       />
 
       {/* TWITTER */}
       <meta
         name="twitter:card"
         content="summary_large_image"
+      />
+
+      <meta
+        name="twitter:site"
+        content="@SudarshanResort"
+      />
+
+      <meta
+        name="twitter:creator"
+        content="@SudarshanResort"
       />
 
       <meta

@@ -40,7 +40,7 @@ const Facilities_blogcards = () => {
         {facilities.map((item, index) => (
           <div key={index} className={style.card}>
             <div className={style.iconWrapper}>
-              <img src={item.img} alt={item.title} />
+              <img src={item.img} alt={item.title} loading="lazy" decoding="async" />
             </div>
 
             <h3>{item.title}</h3>

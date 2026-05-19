@@ -10,6 +10,8 @@ const Whatsapp_logo = () => {
           src="og/whatsapplogo.webp"
           alt="WhatsApp"
           aria-label="WhatsApp"
+          loading="lazy"
+          decoding="async"
           className="
             fixed
             bottom-[100px]

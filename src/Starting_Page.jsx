@@ -21,7 +21,7 @@ const Starting_Page = () => {
           X
         </button>
         <img
-          src="favicon/loadingicon.webp"
+          src="loadingicon.webp"
           alt="loading"
           className="h-[500px] w-auto max-w-[90vw] rounded-md sm:h-[500px]"
         />

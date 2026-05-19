@@ -23,7 +23,7 @@ const Roomblogcards = () => {
 
             {/* IMAGE */}
             <div className={style.imageWrapper}>
-              <img src={room.img} alt={room.title} />
+              <img src={room.img} alt={room.title} loading="lazy" decoding="async" />
 
               <div className={style.overlay}>
                 <Link to="/book" className={style.bookBtn}>

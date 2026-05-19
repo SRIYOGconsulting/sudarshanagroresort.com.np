@@ -19,7 +19,7 @@ const About = () => {
         title="About | Sudarshan Resort"
         description="Learn about Sudarshan Resort, a peaceful agro resort offering comfort, nature, and authentic Nepali hospitality."
         image="/images/about/SudarshanAbout.jpg"
-        url="https://sudarshanresort.com/about"
+        url="https://sudarshanagroresort.com.np/about"
       />
 
       {/* NAV */}
