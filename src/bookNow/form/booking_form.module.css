@@ -1,0 +1,176 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(to bottom, #f7f7f7, #eeeeee);
+  padding: 60px 20px;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.header h1 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.header p {
+  color: #666;
+  margin-top: 5px;
+}
+
+/* FORM */
+.form {
+  width: 100%;
+  max-width: 850px;
+
+  background: white;
+  padding: 35px;
+  border-radius: 12px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* STEP INDICATOR */
+.stepIndicator {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.stepIndicator span {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active {
+  background: #4d9221;
+  color: white;
+}
+
+/* SECTION */
+.section h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+/* GRID */
+.gridForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* INPUTS */
+input, textarea {
+  width: 100%;
+  height: 44px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+}
+
+textarea {
+  height: 100px;
+  margin-top: 10px;
+}
+
+input:focus, textarea:focus {
+  border-color: #4d9221;
+  background: white;
+  outline: none;
+}
+
+/* FLOATING */
+.floatingField {
+  position: relative;
+}
+
+.floatingField label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  transition: 0.2s;
+  background: white;
+  padding: 0 4px;
+}
+
+.floatingField input:focus + label,
+.floatingField input:not(:placeholder-shown) + label {
+  top: 6px;
+  font-size: 11px;
+  color: #4d9221;
+}
+
+/* DATE */
+.datepicker {
+  width: 100%;
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* BUTTONS */
+.primaryBtn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #4d9221;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.stepActions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.stepActions button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #e5e5e5;
+}
+
+.stepActions button:last-child {
+  background: #4d9221;
+  color: white;
+}
+
+/* SUMMARY */
+.summary {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+
+/* SUCCESS */
+.success {
+  margin-top: 15px;
+  color: green;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .gridForm {
+    grid-template-columns: 1fr;
+  }
+}
