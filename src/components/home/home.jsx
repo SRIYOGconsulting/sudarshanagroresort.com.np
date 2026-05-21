@@ -36,7 +36,7 @@ const Home = () => {
         <NavBar />
       </header>
 
-      <main id="main-content">
+      <div id="main-content">
 
   <HomeHero />
 
@@ -68,10 +68,8 @@ const Home = () => {
     </Suspense>
   </section>
 
-</main>
-      <footer>
-        <Footer />
-      </footer>
+</div>
+      <Footer />
       <Menu />
       <Whatsapp_logo />
     </div>

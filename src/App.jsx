@@ -22,6 +22,7 @@ const App = () => {
       <ScrollToTop />
 
       <main>
+        <h1 className="sr-only">Sudarshan Resort</h1>
         <Suspense
           fallback={
             <div role="status" aria-live="polite">

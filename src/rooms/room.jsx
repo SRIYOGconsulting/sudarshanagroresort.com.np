@@ -27,9 +27,9 @@ const Room = () => {
 />
 
       {/* ROOMS SECTION */}
-      <main className={style.main}>
+      <div className={style.main}>
         <Roomcards />
-      </main>
+      </div>
 
       <Footer />
 

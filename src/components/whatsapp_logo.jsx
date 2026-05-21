@@ -8,8 +8,7 @@ const Whatsapp_logo = () => {
       >
         <img
           src="og/whatsapplogo.webp"
-          alt="WhatsApp"
-          aria-label="WhatsApp"
+          alt="WhatsApp chat"
           loading="lazy"
           decoding="async"
           className="

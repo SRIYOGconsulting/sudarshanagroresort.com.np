@@ -54,7 +54,7 @@ const Footer = () => {
             <Link to="/" className="flex items-center gap-3 mb-4">
               <img
                 src="/logo.png"
-                alt="Sudarshan Agro Resort"
+                alt="Sudarshan Agro Resort logo"
                 loading="lazy"
                 decoding="async"
                 className="w-10 h-10 rounded-full object-cover"
@@ -70,18 +70,21 @@ const Footer = () => {
             </p>
 
             {/* SOCIALS */}
-            <div  className="flex gap-4 mt-5">
-              {[{ Icon: Facebook, link: "https://www.facebook.com" }, { Icon: Instagram, link: "https://www.instagram.com" }, { Icon: Linkedin, link: "https://www.linkedin.com" }].map(({ Icon, link }, i) => (
+            <div className="flex gap-4 mt-5">
+              {[
+                { label: "Facebook", Icon: Facebook, link: "https://www.facebook.com" },
+                { label: "Instagram", Icon: Instagram, link: "https://www.instagram.com" },
+                { label: "LinkedIn", Icon: Linkedin, link: "https://www.linkedin.com" },
+              ].map(({ label, Icon, link }, i) => (
                 <a
-                  key={i} 
+                  key={i}
                   href={link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition cursor-pointer"
+                  aria-label={`Visit our ${label} page`}
+                  className="p-3 rounded-full bg-white/5 hover:bg-white/10 transition text-gray-300 hover:text-white"
                 >
-                    <div className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition cursor-pointer">
-                  <Icon className="w-4 h-4 text-gray-300 hover:text-white" />
-                </div>
+                  <Icon className="w-4 h-4" />
                 </a>
               ))}
             </div>
@@ -95,7 +98,7 @@ const Footer = () => {
                 <li key={item}>
                   <Link
                     to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                    className="text-sm opacity-80 hover:opacity-100 hover:text-white transition"
+                    className="text-sm text-white/80 hover:text-white transition"
                   >
                     {item}
                   </Link>
@@ -108,7 +111,7 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Contact</h3>
 
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-3 text-sm text-white/80">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-1" />
                 Lalbhitti, Belbari-2, Morang, Nepal
@@ -116,7 +119,7 @@ const Footer = () => {
 
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                <a href="tel:+9779852020058" className="hover:text-white">
+                <a href="tel:+9779852020058" className="text-white/80 hover:text-white">
                   +977-9852020058
                 </a>
               </li>
@@ -125,7 +128,7 @@ const Footer = () => {
                 <Mail className="w-4 h-4" />
                 <a
                   href="mailto:booking@sudarshanagroresort.com.np"
-                  className="hover:text-white"
+                  className="text-white/80 hover:text-white"
                 >
                   booking@sudarshanagroresort.com.np
                 </a>
@@ -145,17 +148,21 @@ const Footer = () => {
 
   {success ? (
     <p className="text-green-400 text-sm">
-      Subscribed successfully 
+      Subscribed successfully
     </p>
   ) : (
     <form onSubmit={handleSubscribe} className="space-y-5">
-      
+      <label htmlFor="newsletter-email" className="sr-only">
+        Email address
+      </label>
       <input
+        id="newsletter-email"
         type="email"
         required
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Enter your email"
+        aria-label="Email address"
         className="
           w-full
           px-5

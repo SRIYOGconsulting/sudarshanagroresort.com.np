@@ -10,8 +10,7 @@ const Menu = () => {
       >
         <img
           src={menu}
-          alt="Booking.com"
-          aria-label="Booking.com"
+          alt="Booking.com logo"
           className="
             fixed
             bottom-[180px]
