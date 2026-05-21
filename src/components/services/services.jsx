@@ -47,12 +47,9 @@ const Services = () => {
       </section>
 
       <section className={styles.cta}>
-        <h2>Ready to book your Sudarshan resort escape?</h2>
-        <p>Explore our rooms, services, and agro experiences, then reserve a peaceful nature stay with easy online booking.</p>
+      
 
-        <Link to="/rooms" className={styles.cta_btn}>
-          View Rooms
-        </Link>
+      
       </section>
 
       <Footer />

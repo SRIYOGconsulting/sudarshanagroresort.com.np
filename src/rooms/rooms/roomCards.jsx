@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Roomblogcards = () => {
   const roomcontent = [
-     {img:"images/rooms/room1.webp",title:"Mercury",price:"2500", per:"/ per night" },
+     {img:"images/rooms/room1.webp",title:"ercury",price:"2500", per:"/ per night" },
     {img:"images/rooms/room2.webp",title:"Venus",price:"2500", per:"/ per night" },
      {img:"images/rooms/room1.webp",title:"Earth",price:"2500", per:"/ per night" },
     {img:"images/rooms/room2.webp",title:"Mars",price:"2500", per:"/ per night" },

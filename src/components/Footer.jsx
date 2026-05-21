@@ -134,44 +134,72 @@ const Footer = () => {
           </div>
 
           {/* NEWSLETTER */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">
-              Subscribe to our Newsletter
-            </h3>
+        <div>
+  <h3 className="text-white font-semibold mb-4 text-xl">
+    Subscribe to our Newsletter
+  </h3>
 
-            <p className="text-sm opacity-80 mb-4">
-              Get exclusive offers and updates directly in your inbox.
-            </p>
+  <p className="text-sm text-gray-300 mb-6 leading-relaxed">
+    Get exclusive offers and updates directly in your inbox.
+  </p>
 
-            {success ? (
-              <p className="text-green-400 text-sm">
-                Subscribed successfully 
-              </p>
-            ) : (
-              <form onSubmit={handleSubscribe} className="space-y-3">
-                <input
-                  type="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email"
-                  className="w-full px-4 py-3 rounded-lg bg-white text-black outline-none focus:ring-2 focus:ring-[#7fbf42]"
-                />
+  {success ? (
+    <p className="text-green-400 text-sm">
+      Subscribed successfully 
+    </p>
+  ) : (
+    <form onSubmit={handleSubscribe} className="space-y-5">
+      
+      <input
+        type="email"
+        required
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="Enter your email"
+        className="
+          w-full
+          px-5
+          py-3
+          rounded-full
+          bg-transparent
+          border
+          border-white/30
+          text-white
+          placeholder:text-gray-300
+          outline-none
+          focus:border-[#7fbf42]
+          focus:ring-2
+          focus:ring-[#7fbf42]/40
+          transition
+        "
+      />
 
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="w-full bg-[#7fbf42] py-2 rounded-md text-white font-medium hover:bg-[#6aa835] transition disabled:opacity-50"
-                >
-                  {loading ? "Subscribing..." : "Subscribe"}
-                </button>
-              </form>
-            )}
-          </div>
+      <button
+        type="submit"
+        disabled={loading}
+        className="
+          w-full
+          bg-[#65a91f]
+          py-4
+          rounded-full
+          text-white
+          font-semibold
+          text-lg
+          hover:bg-[#548d19]
+          transition
+          disabled:opacity-50
+        "
+      >
+        {loading ? "Subscribing..." : "Subscribe"}
+      </button>
+
+    </form>
+  )}
+      {/* BOTTOM */}
+  </div>
         </div>
       </div>
 
-      {/* BOTTOM */}
       <div className="border-t border-white/10 py-5 text-center text-xs text-gray-400">
         © 2026 Sudarshan Agro Resort. All rights reserved.
         <br />

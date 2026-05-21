@@ -1,7 +1,8 @@
 .homecontainer {
-  display: flex;
-  flex-direction: column;
-  overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-x: hidden;
 }
 
 /* 🔥 GLOBAL SECTION SYSTEM */

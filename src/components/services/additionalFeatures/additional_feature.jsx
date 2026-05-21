@@ -1,4 +1,4 @@
-import style from './Additional_feature.module.css';
+import style from "./Additional_feature.module.css";
 import { motion } from "framer-motion";
 
 const Additional_feature = () => {
@@ -32,40 +32,35 @@ const Additional_feature = () => {
   return (
     <section className={style.container}>
 
-      {/* HEADER */}
       <div className={style.header}>
         <span>EXPERIENCES</span>
         <h2>Additional Services</h2>
         <p>Designed to elevate every moment of your stay</p>
       </div>
 
-      {services.map((item, index) => (
-        <motion.div
-          key={item.title}
-          className={style.sectionBlock}
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
+      <div className={style.grid}>
+        {services.map((item, index) => (
+          <motion.div
+            key={item.title}
+            className={style.card}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: index * 0.1 }}
+            viewport={{ once: true }}
+          >
+            <div
+              className={style.image}
+              style={{ backgroundImage: `url(${item.img})` }}
+            />
 
-          {/* BACKGROUND IMAGE */}
-          <div
-            className={style.bg}
-            style={{ backgroundImage: `url(${item.img})` }}
-          />
-
-          {/* CONTENT */}
-          <div className={style.content}>
-            <span>Premium Experience</span>
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-
-           
-          </div>
-
-        </motion.div>
-      ))}
+            <div className={style.content}>
+              <span>Premium Experience</span>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </div>
+          </motion.div>
+        ))}
+      </div>
 
     </section>
   );
