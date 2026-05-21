@@ -31,7 +31,7 @@ const Nav_Bar = () => {
         {/* LOGO */}
         <Link to="/">
           <img
-            src="/favicon/logo.png"
+            src="/logo.png"
             alt="logo"
             className="h-[70px] w-[70px] object-cover rounded-full"
           />
