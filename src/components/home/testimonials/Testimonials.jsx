@@ -45,7 +45,7 @@ const Testimonials = () => {
           <div key={index} className={style.card}>
 
             <div className={style.avatarWrapper}>
-              <img src={item.img} alt={item.name} />
+              <img src={item.img} alt={item.name} loading="lazy" decoding="async" />
             </div>
 
             <h3>{item.name}</h3>

@@ -15,7 +15,7 @@ const Gallery = () => {
         title="Gallery | Sudarshan Resort"
         description="Explore the gallery of Sudarshan Resort showcasing luxurious rooms, beautiful surroundings, modern facilities, and memorable experiences."
         image="/images/gallery/1.jpg"
-        url="https://sudarshanresort.com/gallery"
+        url="https://sudarshanagroresort.com.np/gallery"
       />
       <h1 className="sr-only">Gallery | Sudarshan Resort</h1>
       {/* <Top/> */}

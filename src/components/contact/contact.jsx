@@ -1,6 +1,7 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 
+import SeoHelmet from "../seoHelmet.jsx";
 import Nav_Bar from "../Nav_Bar.jsx";
 import Footer from "../Footer.jsx";
 import style from "./contact.module.css";
@@ -71,6 +72,13 @@ const Contact = () => {
 
   return (
     <div className={style.page}>
+
+      <SeoHelmet
+        title="Contact | Sudarshan Agro Resort"
+        description="Contact Sudarshan Agro Resort to book a nature escape in Nepal, ask about rooms, services, and agro experiences, or get help planning your stay."
+        image="/images/home/SudarshanHome.jpg"
+        url="https://sudarshanagroresort.com.np/contact"
+      />
 
       <Nav_Bar />
 

@@ -29,7 +29,7 @@ const Home = () => {
         title="Home | Sudarshan Resort"
         description="Welcome to Sudarshan Resort – a peaceful nature retreat offering luxury stays, agro experiences, and modern amenities."
         image="/images/home/SudarshanHome.jpg"
-        url="https://sudarshanresort.com/"
+        url="https://sudarshanagroresort.com.np/"
       />
 
       <header>

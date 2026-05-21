@@ -12,6 +12,8 @@ const Menu = () => {
           src={menu}
           alt="Booking.com"
           aria-label="Booking.com"
+          loading="lazy"
+          decoding="async"
           className="
             fixed
             bottom-[180px]

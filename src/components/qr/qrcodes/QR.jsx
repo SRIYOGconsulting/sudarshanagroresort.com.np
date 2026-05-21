@@ -93,6 +93,8 @@ const Qr = () => {
                 <img
                   src={qr.image}
                   alt={`QR Code for ${qr.title}`}
+                  loading="lazy"
+                  decoding="async"
                   className="w-48 h-48 md:w-64 md:h-64 object-contain"
                 />
               </div>

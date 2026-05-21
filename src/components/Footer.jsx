@@ -55,6 +55,8 @@ const Footer = () => {
               <img
                 src="/logo.png"
                 alt="Sudarshan Agro Resort"
+                loading="lazy"
+                decoding="async"
                 className="w-10 h-10 rounded-full object-cover"
               />
               <span className="text-white font-semibold text-lg">

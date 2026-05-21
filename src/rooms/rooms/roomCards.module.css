@@ -1,0 +1,123 @@
+/* CONTAINER */
+.container {
+  padding: 100px 10%;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  transition: all 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.12);
+}
+
+/* IMAGE */
+.imageWrapper {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+/* BUTTON */
+.bookBtn {
+  padding: 12px 30px;
+  border-radius: 30px;
+
+  background: #c19b76;
+  color: white;
+  text-decoration: none;
+
+  font-size: 14px;
+  letter-spacing: 1px;
+
+  transition: 0.3s ease;
+}
+
+.bookBtn:hover {
+  background: #a8825f;
+}
+
+/* CONTENT */
+.content {
+  padding: 20px;
+  text-align: left;
+}
+
+/* TITLE */
+.content h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #1e1e1e;
+}
+
+/* PRICE */
+.price {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.amount {
+  font-size: 18px;
+  font-weight: 600;
+  color: #c19b76;
+}
+
+.per {
+  font-size: 13px;
+  color: #777;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .container {
+    padding: 60px 20px;
+  }
+
+  .imageWrapper {
+    height: 180px;
+  }
+}

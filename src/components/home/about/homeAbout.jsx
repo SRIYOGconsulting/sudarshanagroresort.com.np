@@ -10,9 +10,9 @@ const About = () => {
 
         <span className={style.tag}>Welcome to</span>
 
-        <h1 id="about-heading">
+        <h2 id="about-heading">
           Sudarshan <span>Agro Resort</span>
-        </h1>
+        </h2>
 
         <p className={style.subtitle}>
           A peaceful agro tourism retreat near Biratnagar

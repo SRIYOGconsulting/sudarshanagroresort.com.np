@@ -58,6 +58,7 @@ const EnjoyAgro = ({ bg }) => {
               src="https://www.youtube.com/embed/dQw4w9WgXcQ"
               title="YouTube video player"
               frameBorder="0"
+              loading="lazy"
               allow="autoplay; encrypted-media"
               allowFullScreen
             />

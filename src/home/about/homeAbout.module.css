@@ -1,0 +1,143 @@
+/* MAIN CONTAINER */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+
+  padding: 120px 10%;
+
+  /* 🌿 soft resort background */
+  background: linear-gradient(to bottom, #ffffff, #f9f9f7);
+}
+
+/* LEFT CONTENT */
+.content {
+  flex: 1;
+  max-width: 520px;
+}
+
+/* SMALL TAG */
+.tag {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #c19b76;
+  text-transform: uppercase;
+}
+
+/* MAIN TITLE */
+.content h1 {
+  font-size: 46px;
+  margin: 10px 0;
+
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.content h1 span {
+  color: #4d9221;
+}
+
+/* SUBTITLE */
+.subtitle {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* DESCRIPTION */
+.description {
+  font-size: 16px;
+  line-height: 28px;
+  color: #555;
+
+  margin-bottom: 30px;
+}
+
+/* BUTTON */
+.about_btn {
+  display: inline-block;
+
+  padding: 14px 32px;
+  border-radius: 30px;
+
+  background: linear-gradient(135deg, #4d9221, #2f5f14);
+  color: white;
+  text-decoration: none;
+
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  transition: all 0.3s ease;
+}
+
+.about_btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* IMAGE SIDE */
+.image_container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* IMAGE WRAPPER (FLOAT EFFECT) */
+.image_wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+
+  border-radius: 16px;
+  overflow: hidden;
+
+  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
+
+/* IMAGE */
+.image_wrapper img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+/* HOVER ZOOM */
+.image_wrapper:hover img {
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .container {
+    gap: 50px;
+    padding: 90px 6%;
+  }
+
+  .content h1 {
+    font-size: 36px;
+  }
+
+  .image_wrapper img {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .image_wrapper img {
+    height: 280px;
+  }
+}

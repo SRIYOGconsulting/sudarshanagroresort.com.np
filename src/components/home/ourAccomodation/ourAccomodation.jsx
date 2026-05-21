@@ -38,7 +38,7 @@ const Our_Accomodation = () => {
         {rooms.map((room, index) => (
           <div key={index} className={style.card}>
 
-            <img src={room.img} alt={room.alt} />
+            <img src={room.img} alt={room.alt} loading="lazy" decoding="async" />
 
             {/* OVERLAY */}
             <div className={style.overlay}>
